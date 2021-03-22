@@ -28,4 +28,10 @@ Tracker.creat({
   date: Date.current()
 })
 
+5.times do 
+  Journal.create({
+    content: 'some content here'
+  })
+end
+
 # Time.now.strftime("%Y-%d-%m %H:%M:%S %Z") this is also something you can do
