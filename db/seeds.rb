@@ -22,5 +22,10 @@ end
 
 5.times do
 Tracker.creat({
-  night_times: 10:
+  night_times: 00:00,
+  morning_times: 00:00,
+  slept_times: 8,
+  date: Date.current()
 })
+
+# Time.now.strftime("%Y-%d-%m %H:%M:%S %Z") this is also something you can do
