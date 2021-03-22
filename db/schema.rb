@@ -23,10 +23,11 @@ ActiveRecord::Schema.define(version: 2021_03_19_053648) do
   end
 
   create_table "trackers", force: :cascade do |t|
-    t.integer "night_times"
-    t.integer "morning_times"
-    t.integer "slept_times"
+    t.time "night_times"
+    t.time "morning_times"
+    t.time "slept_times"
     t.integer "user_id"
+    t.date "date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

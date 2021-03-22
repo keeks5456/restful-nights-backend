@@ -5,6 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Tracker.destroy_all
+Journal.destroy_all
+User.destroy_all
 
+require 'faker'
 
-User
+5.times do
+User.create({
+  username: Faker::TvShows::RickAndMorty.character,
+  email: baconCanSave.gmail.com
+  password: 'bacon',
+  password_confirmation: 'bacon'
+})
+end
+
+5.times do
+Tracker.creat({
+  night_times: 10:
+})
