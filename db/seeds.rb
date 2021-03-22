@@ -13,20 +13,21 @@ require 'faker'
 
 5.times do
 User.create({
-  username: Faker::TvShows::RickAndMorty.character,
-  email: baconCanSave.gmail.com
+  name: Faker::TvShows::RickAndMorty.character,
+  email: 'baconCanSave.gmail.com',
   password: 'bacon',
   password_confirmation: 'bacon'
 })
 end
 
 5.times do
-Tracker.creat({
-  night_times: 00:00,
-  morning_times: 00:00,
-  slept_times: 8,
+Tracker.create({
+  night_times: '00:00',
+  morning_times: '00:00',
+  slept_times: '0 hours',
   date: Date.current()
 })
+end
 
 5.times do 
   Journal.create({
@@ -34,4 +35,5 @@ Tracker.creat({
   })
 end
 
+puts 'seeds complete'
 # Time.now.strftime("%Y-%d-%m %H:%M:%S %Z") this is also something you can do

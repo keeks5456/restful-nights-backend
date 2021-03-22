@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(version: 2021_03_19_053648) do
   end
 
   create_table "trackers", force: :cascade do |t|
-    t.time "night_times"
-    t.time "morning_times"
-    t.time "slept_times"
+    t.string "night_times"
+    t.string "morning_times"
+    t.string "slept_times"
     t.integer "user_id"
     t.date "date"
     t.datetime "created_at", precision: 6, null: false
