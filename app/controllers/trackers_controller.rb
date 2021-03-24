@@ -24,4 +24,9 @@ class TrackersController < ApplicationController
     tracker.destroy
     render json: {message: 'deleted'}
   end
+
+  private
+  def tracker_params 
+    params.require(:tracker).permit(:night_times, :morning_times, :slept_times, :user_id, :date)
+  end
 end

@@ -25,13 +25,15 @@ Tracker.create({
   night_times: '00:00',
   morning_times: '00:00',
   slept_times: '0 hours',
-  date: Date.current()
+  date: Date.current(),
+  user_id: User.all.sample.id
 })
 end
 
 5.times do 
   Journal.create({
-    content: 'some content here'
+    content: 'some content here',
+    user_id: User.all.sample.id
   })
 end
 
