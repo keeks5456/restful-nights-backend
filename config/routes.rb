@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resource :sessions, only: [:create]
+
+  root 'welcome#index'
   resources :users
   resources :trackers
   resources :journals
