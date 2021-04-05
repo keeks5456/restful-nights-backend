@@ -7,10 +7,23 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'example.com'
+    #  change later
+    origins 'example.com' 
 
     resource '*',
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      credentials: true
   end
+
+  # allow do
+  #   #  change later for a new domain later when hosted
+  #   origins 'example.com' 
+
+  #   resource '*',
+  #     headers: :any,
+  #     methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  #     credentials: true
+  # uncomment later
+
 end

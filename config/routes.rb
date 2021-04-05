@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resource :sessions, only: [:create]
+  resources :sessions, only: [:create]
 
-  root 'welcome#index'
+  root to: "static#home"
   resources :users
   resources :trackers
   resources :journals
